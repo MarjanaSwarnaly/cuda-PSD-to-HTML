@@ -1,0 +1,514 @@
+/*======================*/
+/*==basic setup==*/
+/*======================*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+body{
+  font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+/*heading*/
+
+h1{
+  font-size: 3.2rem;
+  color: #fff;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/*======================*/
+/*==Reusable Component==*/
+/*======================*/
+.row{
+  max-width: 114rem;
+  margin: 0 auto;
+  width: 100%;
+
+}
+section{
+  padding: 8rem 0;
+}
+h2{
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: .4rem;
+  background: #000;
+  width: 8.6rem;
+  margin: auto;
+  margin-top: 2.2rem;
+}
+
+.section_description {
+  font-size: 1.8rem;
+  width: 60%;
+  line-height: 2.5rem;
+  margin-left: 20%;
+}
+h3{
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.box {
+  padding: 1%;
+}
+.box p{
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  line-height: 2.4rem;
+
+}
+h4{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+}
+
+/*BUTTON*/
+.btn link,
+.btn visited,
+.btn{
+  background: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: .3rem solid #000;
+  padding: 1.5rem 6rem;
+  display: inline-block;
+  border-radius: .3rem;
+  margin-top: 4.5rem;
+}
+
+/*======================*/
+/*==Header Section==*/
+/*======================*/
+header{
+  background: linear-gradient(rgba(135, 80, 156,0.8), rgba(135, 80, 156, 0.8)), url(img/hero-bg.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  position: relative;
+  background-attachment: fixed;
+}
+.logo{
+  height: 3.5rem;
+  width: auto;
+  margin-top: 3.5rem;
+  float: left;
+}
+
+/*======================*/
+/*==Main Navigation==*/
+/*======================*/
+.main_nav{
+  float: right;
+  margin-top: 4rem;
+}
+.main_nav li{
+  display: inline-block;
+  margin-left: 3rem;
+}
+.main_nav li:first-child{
+  margin-left: 0;
+}
+.main_nav li a:link,
+.main_nav li a:visited{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: rgba(100, 58, 121, 0);
+  padding: .6rem 1.6rem;
+  border-radius: .4rem;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.main_nav li:hover a:link,
+.main_nav li:hover a:visited{
+  background: rgba(100, 58, 121, 1);
+  transition: .3s;
+}
+.active{
+  background: rgba(100, 58, 121, 1);
+  border-radius: .4rem;
+}
+/*+++sticky header navigation++++*/
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(135,80,156,.9);
+  padding: 1rem 0;
+  box-shadow: 0 0.3rem 0.5rem rgba(255,255,255,.7);
+  }
+  .sticky .logo{
+    margin-top: 0;
+  }
+  .sticky .main_nav{
+    margin-top: .2rem;
+  }
+
+
+.hero_text_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.btn_hero{
+  background: #eb7d4b;
+  border-color: #c86a40;
+  font-size: 1.6rem;
+}
+/*======================*/
+/*==service Section==*/
+/*======================*/
+.service_section{
+  background: linear-gradient(rgba(23, 194, 164,0.7), rgba(23, 194, 164, 0.7)), url(img/hero-bg.jpeg);
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.service_section h2::after{
+  background: #14a58c;
+}
+.services_icon {
+  height: 12rem;
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+}
+/*======================*/
+/*==Team Section==*/
+/*======================*/
+.team_section{
+  background: linear-gradient(rgba(231, 241, 248,0.9), rgba(231, 241, 248,0.9)), url(img/team_bg.jpg);
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.team_section h2::after{
+  background: #c8d9e5;
+}
+.team_member {
+  height: 20rem;
+  width: 20rem;
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+  border-radius: 10rem;
+  transition: .3s;
+}
+.team_member:hover{
+  transform: scale(1.2);
+}
+.team_section h2{
+  color: #3c4761;
+}
+.team_section p{
+  color: #3c4761;
+}
+.team_section h3{
+  color: #3c4761;
+}
+.role{
+  display: inline-block;
+  color: #fff;
+  margin-top: .5rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.team_section .box p{
+  color: #5d677b;
+}
+.social_icon{
+  margin-top: 2.5rem;
+}
+.social_icon ul li{
+  display: inline-block;
+  padding: .5rem;
+}
+
+.social_icon ul li i::before{
+  display: inline-block;
+  background: #bdd1df;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+  transition: .5s;
+
+}
+.social_icon ul li a:hover i::before{
+  background: #393939;
+  transform: rotate(360deg);
+}
+/*======================*/
+/*==skill Section==*/
+/*======================*/
+.skill_section{
+  background: linear-gradient(rgba(255, 255, 255,0.9), rgba(255, 255, 255, 0.9)), url(img/skill-bg.jpeg);
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.skill_section h2::after{
+  background: #c8d9e5;
+}
+.skill_section h2{
+  color: #3c4761;
+}
+.skill_section p{
+  color: #3c4761;
+}
+.skill_section h3{
+  color: #3c4761;
+}
+.skill_section .box{
+  margin-top: 4.5rem;
+}
+.skill_section h3{
+  color: #3c4761;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+svg.radial-progress circle{
+  stroke-width: 5;
+}
+svg.radial-progress text{
+  fill: #3c4761;
+  font-size: 1.5rem;
+}
+svg.web_design circle{
+  stroke: #30bae7;
+}
+svg.html_css circle{
+  stroke: #d74680;
+}
+svg.graphic_design circle{
+  stroke: #15c7a8;
+}
+svg.ui_ux circle{
+  stroke: #eb7d4b;
+}
+/*======================*/
+/*==Portfolio Section==*/
+/*======================*/
+.portfolio_section{
+  background: linear-gradient(rgba(255, 221, 153,0.9), rgba(255, 221, 153, 0.9)), url(img/skill-bg.jpeg);
+  text-align: center;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.portfolio_section h2{
+  color: #393939;
+}
+.portfolio_section h2::after{
+  background: #e5c37f;
+}
+.portfolio_section .section_description{
+  color: #60584a;
+}
+.button_portfolio{
+  margin: 4.5rem 0;
+}
+.button_portfolio button{
+  background: #ebc985;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  font-size: 1.8rem;
+  margin: 0 .5rem;
+  border: 0;
+  text-transform: uppercase;
+  color: #3c4761;
+  transition: .5s;
+}
+.button_portfolio button:hover{
+  cursor: pointer;
+  box-shadow: inset 0 .3rem .5rem rgba(60, 71, 97, .5);
+}
+.portfolio_img{
+  width: 100%;
+  height: 30rem;
+}
+.portfolio_section .col:nth-child(3){
+  margin-left: 0;
+}
+
+.portfolio_section .mixitup-control-active{
+  background: #fff;
+}
+.btn-load-more{
+  background:#17c2a4;
+  border-color:#14a58c;
+}
+/*======================*/
+/*==Testimonial Section==*/
+/*======================*/
+
+.testimonial_section{
+  background: linear-gradient(rgba(215, 70, 128,0.9), rgba(215, 200, 153, 0.9)), url(img/skill-bg.jpeg);
+  text-align: center;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.testimonial_section h2::after{
+  background: #b73c6d;
+}
+.testimonial_section .section_description{
+  text-align: center;
+}
+
+.client_img{
+  float: left;
+  width: 10rem;
+}
+.client_img img{
+  border-radius: 50%;
+  height: 10rem;
+  margin-bottom: 4rem;
+}
+.client_review{
+  width: 30rem;
+  float: left;
+  text-align: left;
+  margin-left: 4rem;
+}
+.client_review p{
+  font-size: 2.1rem;
+  font-weight: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.client_review .role{
+  margin:0;
+  font-size: 1.8rem;
+  color: #ffdd99;
+}
+.testimonial_section .col:nth-child(3){
+  margin-left: 0;
+}
+.testimonial_section .col:nth-child(1),
+.testimonial_section .col:nth-child(2){
+  margin-top: 4rem;
+}
+.testimonial_section .col:nth-child(3),
+.testimonial_section .col:nth-child(4){
+  margin-top: 8rem;
+}
+/*======================*/
+/*==Contact Section==*/
+/*======================*/
+.contact_section{
+  background: linear-gradient(rgba(60, 84, 153,0.9), rgba(60, 84, 153, 0.9)), url(img/hero-bg.jpeg);
+  text-align: center;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.contact_section h2::after{
+  background: #273a71;
+}
+.contact_section form{
+  margin-top: 4rem;
+  width: 70%;
+  margin-left: 15%;
+}
+.contact_section input[type="text"],
+.contact_section input[type="email"],
+.contact_section textarea{
+  background: #273a71;
+  border: .1rem solid #273a71;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  font-size: 1.8rem;
+  margin: .5rem 0;
+  color: #fff;
+}
+.contact_section form ::placeholder{
+  color: #fff;
+  opacity: 1;
+}
+.btn_submit{
+  border:0;
+  border-bottom: .3rem solid #299ec5;
+  background: #30bae7;
+}
+.btn_submit:hover{
+  cursor: pointer;
+}
+/*======================*/
+/*==Footer Section==*/
+/*======================*/
+.footer_section{
+  background: #344b8e;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: .1rem solid rgba(255, 255, 255, 0.3);
+}
+.footer_section li{
+  display: inline-block;
+  margin: 0 2rem;
+
+}
+.footer_section ul a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+}
+.footer_section ul a:hover{
+  color: #30bae7;
+}
