@@ -1,2 +1,4 @@
 # cuda-PSD-to-HTML
-Cuda(Portfolio 1)
+Cuda
+
+https://marjanaswarnaly.github.io/cuda-PSD-to-HTML/
